@@ -444,6 +444,103 @@ footer .dim{color:var(--footer-dim)}
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
 
+/* pharmacy hours + clinic gallery */
+.ph-hours{margin-top:8px;color:var(--ink)}
+.ph-hours b{color:var(--head);margin-right:6px}
+.gallery-wrap{margin-top:clamp(28px,5vw,44px)}
+.g-title{font-size:clamp(1.5rem,4vw,2.1rem);margin-bottom:16px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gallery figure{margin:0;border-radius:var(--r-md);overflow:hidden;background:var(--surface-2);aspect-ratio:4/3;max-width:100%}
+.gallery img{width:100%;height:100%;object-fit:cover}
+@media (max-width:560px){.gallery{grid-template-columns:1fr 1fr}}
+
+/* media: patient stories, gallery, viewer */
+.stories{margin-bottom:clamp(32px,6vw,56px);display:grid;gap:10px}
+.stories h2{font-size:clamp(1.8rem,4.8vw,2.7rem)}
+.mrow{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 12px;margin-top:6px}
+.mrow .mcard{flex:0 0 clamp(190px,44vw,250px);scroll-snap-align:start}
+.mcard{display:grid;gap:8px;align-content:start;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:8px;color:var(--ink);min-width:0}
+.mcard:hover{border-color:var(--accent)}
+.mthumb{position:relative;display:block;aspect-ratio:4/5;max-width:100%;border-radius:12px;overflow:hidden;background:var(--surface-2)}
+.mgrid .mthumb{aspect-ratio:4/3}
+.mthumb img,.mthumb video{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.play{position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:var(--accent);box-shadow:0 6px 18px var(--shadow)}
+.play::after{content:"";position:absolute;left:22px;top:17px;border-left:16px solid var(--accent-ink);border-top:11px solid transparent;border-bottom:11px solid transparent}
+.mcap{font-size:.9rem;line-height:1.4;padding:0 4px 4px;color:var(--text)}
+.gal{margin-top:clamp(36px,6vw,64px)}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+@media (max-width:560px){.mgrid{grid-template-columns:1fr 1fr}}
+.lightbox{position:fixed;inset:0;z-index:520;background:var(--footer-bg);display:grid;grid-template-rows:auto 1fr auto;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;padding:env(safe-area-inset-top,0px) max(12px,env(safe-area-inset-right,0px)) env(safe-area-inset-bottom,0px) max(12px,env(safe-area-inset-left,0px))}
+.lightbox.open{opacity:1;visibility:visible}
+.lb-top{display:flex;justify-content:space-between;align-items:center;color:var(--footer-ink);padding:10px 4px;font-weight:600}
+.lb-close,.lb-nav{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:transparent;color:var(--footer-ink);font-size:1.7rem;line-height:1}
+.lb-media{position:relative;min-height:0;display:grid;place-items:center}
+.lb-inner{display:grid;place-items:center;gap:12px;width:100%;height:100%;min-height:0}
+.lb-inner img,.lb-inner video{max-width:100%;max-height:calc(100vh - 170px);object-fit:contain;border-radius:8px}
+.lb-inner iframe{width:min(100%,960px);aspect-ratio:16/9;max-width:100%;border:0;border-radius:8px}
+.lb-yt{color:var(--footer-ink);font-weight:600}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%)}
+.lb-prev{left:0}.lb-next{right:0}
+.lb-cap{color:var(--footer-ink);text-align:center;padding:10px 8px 16px;min-height:1.5em}
+#galTabs{justify-content:flex-start;max-width:max-content}
+#galTabs button{flex:0 0 auto}
+.mthumb video{background:var(--accent-soft)}
+
+/* ---------- screen-reader text, language select ---------- */
+.sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+select.lang{appearance:none;-webkit-appearance:none;cursor:pointer;padding:0 32px 0 14px;font-family:inherit;
+  background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%232D6A4F' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 12px center}
+html[lang="hi"] h1,html[lang="hi"] h2,html[lang="hi"] h3{line-height:1.42;letter-spacing:0}
+html[lang="hi"] body{line-height:1.85}
+
+/* ---------- homoeopathy medicine note ---------- */
+.mininote{margin-top:14px;font-size:.92rem}
+.mininote a{color:var(--accent);font-weight:600;text-underline-offset:3px}
+.medrule{display:flex;gap:16px;align-items:flex-start;background:var(--surface);border:1.5px solid var(--gold);border-left-width:6px;border-radius:var(--r-md);padding:18px 20px;margin-bottom:22px;scroll-margin-top:96px}
+.medrule .ic{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--gold) 14%,transparent);color:var(--gold)}
+.medrule h3{font-size:1.12rem;margin-bottom:6px}
+.medrule ul{margin:0;padding-left:1.1em;display:grid;gap:4px;color:var(--ink)}
+
+/* ---------- diet & lifestyle guide ---------- */
+.gd-tools{display:grid;gap:14px;padding:18px}
+.gd-search{position:relative;display:flex;align-items:center}
+.gd-search>svg{position:absolute;left:14px;color:var(--text);pointer-events:none}
+.gd-search input{width:100%;min-height:52px;padding:0 48px 0 44px;border:1.5px solid var(--line);border-radius:999px;background:var(--surface-2);font:inherit;font-size:1rem;color:var(--ink)}
+.gd-search input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);background:var(--surface)}
+.gd-search input::-webkit-search-cancel-button{display:none}
+.gd-search .icon-btn{position:absolute;right:6px}
+.gd-show{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.gd-show .label{font-weight:600;color:var(--ink);font-size:.92rem}
+.gd-show .seg button{min-height:40px;padding:.2em .95em;font-size:.92rem}
+.gd-tools .filters{margin:0;padding-bottom:2px}
+.gd-count{margin:16px 2px 10px;font-size:.92rem;color:var(--text)}
+.gd-list{display:grid;gap:10px}
+.gd-list details{padding:0 18px}
+.gd-list summary{align-items:center}
+.gd-sum{display:grid;gap:2px;min-width:0}
+.gd-sum b{font-size:1.04rem;color:var(--ink)}
+.gd-sum small{font-weight:500;color:var(--text);font-size:.84rem}
+.gd-body{display:grid;gap:12px;padding:2px 0 18px}
+.gd-cols{display:grid;gap:12px;grid-template-columns:1fr}
+.gd-box{border-radius:var(--r-sm,10px);padding:12px 14px;background:var(--surface-2);border:1px solid var(--line)}
+.gd-box h4{margin:0 0 6px;font-size:.95rem;display:flex;align-items:center;gap:8px;color:var(--head)}
+.gd-box h4 i{width:10px;height:10px;border-radius:50%;background:var(--accent);flex:none}
+.gd-box.avoid h4 i{background:#B4532A}
+.gd-box.yoga h4 i{background:var(--gold)}
+.gd-box.naturo h4 i{background:#5A7D8C}
+.gd-box ul{margin:0;padding-left:1.1em;display:grid;gap:3px;font-size:.95rem;color:var(--ink)}
+.gd-warn{margin:0;padding:10px 14px;border-radius:var(--r-sm,10px);background:color-mix(in srgb,var(--gold) 12%,transparent);color:var(--ink);font-size:.93rem}
+.gd-acts{display:flex;flex-wrap:wrap;gap:8px}
+.gd-list mark{background:color-mix(in srgb,var(--gold) 30%,transparent);color:inherit;border-radius:3px;padding:0 1px}
+.gd-empty{padding:22px;text-align:center}
+.gd-more{display:flex;justify-content:center;margin-top:16px}
+.gd-disc{margin-top:18px;max-width:80ch}
+@media (min-width:760px){.gd-cols{grid-template-columns:1fr 1fr}.gd-tools{padding:22px 24px}}
+@media (max-width:560px){.medrule{padding:16px 16px 16px 14px;gap:0}.medrule .ic{display:none}.medrule ul{font-size:.95rem}}
+#gdCats button{min-height:40px;font-size:.92rem;padding:.2em .95em}
+#gdCats button .num{opacity:.6;font-weight:600;margin-left:2px}
+@media (min-width:1000px){.gd-list{grid-template-columns:1fr 1fr;align-items:start}.gd-list details[open]{grid-column:1/-1}}
+
 </style>
 </head>
 <body>
@@ -452,7 +549,7 @@ footer .dim{color:var(--footer-dim)}
   <a class="brand" href="index.html" aria-label="Manasvi Homoeo &amp; Wellness Studio, home"><svg width="34" height="38" viewBox="0 0 48 52" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 44C8 24 22 8 40 5c2 20-8 38-26 39"/><path d="M12 42C20 30 28 20 36 10"/><path d="M20 32c4 0 8-2 10-6M16 38c3-1 6-3 8-5M26 22c3 0 5-1 7-3"/><circle cx="8" cy="46" r="3"/></svg><span><b>Manasvi</b><small>Homoeo &amp; Wellness Studio</small></span></a>
   <a class="btn sm" href="index.html#book">Book an appointment</a>
 </div></header>
-<main id="main"><div class="wrap"><article class="post"><h1>Privacy policy</h1><p>Last updated: 17 October 2026.</p><p>This policy explains how Manasvi Homoeo &amp; Wellness Studio handles the information you share through this website (aalok.co.in).</p><h2>Who we are</h2><p>Manasvi Homoeo &amp; Wellness Studio, First floor, Alok Medical and Homeo Pharmacy, Juna Dawa Bazar, near Swasthya Hospital, Ahilyanagar, Maharashtra 414001. Phone: +91 90671 97969. Email: manasvihomeo25@gmail.com.</p><h2>What we collect</h2><p>When you request an appointment: your name, mobile number, preferred day and time, and visit type. A short reason for the visit and your email address are optional.</p><p>When you send feedback: your name, rating and message.</p><p>We do not ask for medical reports or a detailed medical history through this website. Please share those with the doctor at your consultation.</p><h2>How your request reaches us</h2><p>If you choose WhatsApp or email, your phone opens that app with the message ready. Nothing is sent until you press send, and the message is then handled under WhatsApp&#x27;s or your email provider&#x27;s terms.</p><p>If you choose &quot;Send to the clinic&quot;, your details are submitted through our website host, Netlify, and passed to the clinic.</p><h2>How we use it</h2><p>We use your details only to contact you about your appointment or to reply to your feedback. We do not sell your information or use it for advertising.</p><h2>Health tools</h2><p>The BMI, due date and period tools work entirely on your device. What you enter in them is not sent to us or stored by this website.</p><h2>Stored on your device</h2><p>The website remembers your language choice (English or Marathi) in your browser. It does not use advertising or tracking cookies.</p><h2>Other services</h2><p>Fonts are loaded from Google Fonts, and the map is provided by Google Maps. These services may receive your device&#x27;s IP address. Links to WhatsApp, Google Maps, Google Calendar and the clinic&#x27;s online listing open those services, which have their own privacy policies.</p><h2>How long we keep it</h2><p>We keep appointment and feedback messages only as long as needed to arrange your care and follow-up, or as required by law.</p><h2>Your choices</h2><p>To ask what information we hold about you, or to have it corrected or deleted, call +91 90671 97969 or email manasvihomeo25@gmail.com.</p><h2>Changes to this policy</h2><p>We may update this policy. The date at the top shows the latest version.</p></article></div></main>
+<main id="main"><div class="wrap"><article class="post"><h1>Privacy policy</h1><p>Last updated: 17 October 2026.</p><p>This policy explains how Manasvi Homoeo &amp; Wellness Studio handles the information you share through this website (aalok.co.in).</p><h2>Who we are</h2><p>Manasvi Homoeo &amp; Wellness Studio, First floor, Alok Medical and Homeo Pharmacy, Juna Dawa Bazar, near Swasthya Hospital, Ahilyanagar, Maharashtra 414001. Phone: +91 90671 97969. Email: manasvihomeo25@gmail.com.</p><h2>What we collect</h2><p>When you request an appointment: your name, mobile number, preferred day and time, and visit type. A short reason for the visit and your email address are optional.</p><p>When you send feedback: your name, rating and message.</p><p>We do not ask for medical reports or a detailed medical history through this website. Please share those with the doctor at your consultation.</p><h2>How your request reaches us</h2><p>If you choose WhatsApp or email, your phone opens that app with the message ready. Nothing is sent until you press send, and the message is then handled under WhatsApp&#x27;s or your email provider&#x27;s terms.</p><p>If the clinic offers a Google Form and you choose &quot;Submit through Google Form&quot;, the form opens with your details filled in. They are sent only when you press Submit there, and are stored in the clinic&#x27;s Google account under Google&#x27;s terms.</p><h2>How we use it</h2><p>We use your details only to contact you about your appointment or to reply to your feedback. We do not sell your information or use it for advertising.</p><h2>Patient photos and videos</h2><p>Patient stories, photos and videos are shown on this website only with the patient&#x27;s permission. To have one removed, contact the clinic.</p><p>YouTube videos load from YouTube (Google) only when you choose to play them.</p><h2>Health tools</h2><p>The BMI, due date and period tools work entirely on your device. What you enter in them is not sent to us or stored by this website.</p><h2>Stored on your device</h2><p>The website remembers your language choice (English or Marathi) in your browser. It does not use advertising or tracking cookies.</p><h2>Other services</h2><p>Fonts are loaded from Google Fonts, and the map is provided by Google Maps. These services may receive your device&#x27;s IP address. Links to WhatsApp, Google Maps, Google Calendar and the clinic&#x27;s online listing open those services, which have their own privacy policies.</p><h2>How long we keep it</h2><p>We keep appointment and feedback messages only as long as needed to arrange your care and follow-up, or as required by law.</p><h2>Your choices</h2><p>To ask what information we hold about you, or to have it corrected or deleted, call +91 90671 97969 or email manasvihomeo25@gmail.com.</p><h2>Changes to this policy</h2><p>We may update this policy. The date at the top shows the latest version.</p></article></div></main>
 <footer><div class="wrap">
   <div class="f-grid">
     <div><div class="f-brand">Manasvi Homoeo &amp; Wellness Studio</div><p class="dim">First floor, Alok Medical and Homeo Pharmacy, Juna Dawa Bazar, near Swasthya Hospital, Ahilyanagar, Maharashtra 414001</p></div>
