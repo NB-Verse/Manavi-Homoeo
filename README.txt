@@ -6,7 +6,7 @@ WHAT IS IN THIS FOLDER
 - privacy.html    Privacy policy
 - 404.html        "Page not found" page (.htaccess tells GoDaddy hosting to use it)
 - blog/           Six health notes as separate pages, so Google can find them
-- images/         Share image used when the link is posted on WhatsApp or Facebook
+- images/         Share image, logo icon and the two visiting-card images (keep this folder)
 - sitemap.xml, robots.txt   Help Google index the site
 
 PHOTOS AND VIDEOS: all go in the "media" folder
@@ -29,6 +29,18 @@ DIET AND LIFESTYLE GUIDE (section "Diet guide")
 - The note on taking homoeopathic medicine (15 minutes before and after, raw onion, raw garlic, coffee)
   appears in the guide, the Homoeopathy card and the FAQ.
 
+PAYMENTS AND SHARING (section "Pay")
+- Google Pay / UPI QR (redrawn from the clinic's own QR, so it stays sharp), UPI ID, "Pay with a UPI app" button
+  (opens Google Pay / PhonePe on phones) and "Save QR image".
+- Bank transfer details with a copy button on each line.
+- One-tap sharing of the UPI details, bank details and clinic details by WhatsApp, text message, copy,
+  or other apps; "Save to contacts" adds the clinic to the phone's contacts.
+- Patients are asked to send the payment screenshot on WhatsApp after paying.
+
+LINKS WITHOUT #
+- Menu and buttons scroll within the page without adding "#..." to the address, so shared links stay clean.
+- Diet guide share links look like https://aalok.co.in/?guide=pcos
+
 LANGUAGES
 - English, Marathi and Hindi. The selector is at the top right; the choice is remembered on the phone.
 - Messages sent to the clinic (WhatsApp, email, Google Form) are always in English, so they are easy to read.
@@ -50,7 +62,9 @@ SETTINGS (open index.html in a text editor and search for "EDIT THESE")
 - OFFERS_ONLINE: true (online consultation shown).
 - PHARMACY_HOURS: Monday to Saturday, 10 AM to 9:30 PM.
 - REG_NO: add the council registration number when available.
-- REVIEWS_URL: the clinic's listing link (Justdial now; switch to the Google review link later).
+- GOOGLE_REVIEWS_URL and JUSTDIAL_URL: review links (both filled in). INSTAGRAM_URL: the clinic's Instagram.
+- UPI_ID, UPI_NAME and BANK: payment details shown in "Payments and sharing". If the account changes,
+  update these AND the QR code (send the new Google Pay QR and the site can be rebuilt).
 - TESTIMONIALS: real patient feedback, only with permission.
 - CALENDAR_BOOKING_URL: optional Google Calendar appointment-schedule link.
 

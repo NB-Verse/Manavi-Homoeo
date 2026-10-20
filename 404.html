@@ -98,7 +98,7 @@ html[lang="mr"] body{line-height:1.85}
 .site.scrolled{border-color:var(--line);box-shadow:0 4px 18px var(--shadow)}
 .bar{display:flex;align-items:center;gap:14px;height:var(--hh)}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0;margin-right:auto;color:var(--head)}
-.brand svg{width:34px;height:38px;flex:none}
+.brand svg.logo{width:46px;height:40px;flex:none;color:#36703F}
 .brand b{display:block;font-family:var(--display);font-size:1.28rem;font-weight:700;color:var(--head);line-height:1.05}
 .brand small{display:block;font-size:.76rem;color:var(--text);line-height:1.25;white-space:nowrap}
 .nav{display:flex;align-items:center;gap:22px}
@@ -541,6 +541,45 @@ html[lang="hi"] body{line-height:1.85}
 #gdCats button .num{opacity:.6;font-weight:600;margin-left:2px}
 @media (min-width:1000px){.gd-list{grid-template-columns:1fr 1fr;align-items:start}.gd-list details[open]{grid-column:1/-1}}
 
+/* ---------- logo, footer brand ---------- */
+:root[data-theme="dark"] .brand svg.logo{color:#A8DDBE}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand svg.logo{color:#A8DDBE}}
+.f-brand{display:flex;align-items:center;gap:12px}
+.f-brand .logo{flex:none;color:currentColor}
+.f-brand small{display:block;font-family:var(--body);font-size:.85rem;font-weight:500;font-style:italic;opacity:.8;margin-top:2px}
+.rv-btns{display:flex;flex-wrap:wrap;gap:10px}
+
+/* ---------- payments and sharing ---------- */
+.pay-grid{display:grid;gap:18px}
+.pay-card{display:grid;gap:14px;align-content:start;padding:22px}
+.pay-card h3,.share-card h3{display:flex;align-items:center;gap:10px;font-size:1.18rem;margin:0}
+.pay-card h3 .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);flex:none}
+.qrbox{justify-self:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 16px 10px;text-align:center;box-shadow:0 6px 20px rgba(31,77,54,.08)}
+.qrbox .qr{display:block;width:min(220px,60vw);height:auto}
+.qr-name{margin:8px 0 0;font-weight:600;color:#262A27;font-size:.95rem}
+.center{text-align:center}
+.kv{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:6px 6px 6px 14px}
+.kv span{color:var(--text);font-size:.88rem}
+.kv b{color:var(--ink);font-size:1.02rem;margin-right:auto;word-break:break-all}
+.acts{display:flex;flex-wrap:wrap;gap:10px}
+.bank{display:grid;gap:8px;margin:0}
+.bank>div{display:grid;gap:2px;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:8px 6px 8px 14px}
+.bank dt{font-size:.82rem;color:var(--text)}
+.bank dd{margin:0;display:flex;align-items:center;gap:10px;justify-content:space-between;min-height:44px}
+.bank dd b{color:var(--ink);font-size:1.02rem;word-break:break-all}
+.share-row{display:flex;flex-wrap:wrap;gap:8px}
+.share-row .btn{min-height:42px;padding:.3em 1em;font-size:.92rem}
+.paynote{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;margin:18px 0;padding:16px 20px;border-radius:var(--r-md);background:color-mix(in srgb,var(--gold) 10%,var(--surface));border:1.5px solid color-mix(in srgb,var(--gold) 45%,transparent)}
+.paynote p{margin:0;max-width:68ch;color:var(--ink)}
+.share-card{display:grid;gap:20px;padding:22px}
+.share-card p{margin:6px 0 14px}
+.vcards{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.vcard{display:block;border-radius:10px;overflow:hidden;border:1px solid var(--line);box-shadow:0 4px 14px rgba(0,0,0,.06)}
+.vcard img{display:block;width:100%;height:auto}
+@media (min-width:860px){.pay-grid{grid-template-columns:1fr 1fr}.share-card{grid-template-columns:minmax(0,1.1fr) 1fr;align-items:center}}
+@media (max-width:420px){.vcards{grid-template-columns:1fr}}
+.st-rv{margin-top:12px}
+
 </style>
 </head>
 <body>
@@ -552,7 +591,7 @@ html[lang="hi"] body{line-height:1.85}
 <main id="main"><div class="wrap"><div class="post" style="text-align:left"><p class="eyebrow">Error 404</p><h1>This page could not be found</h1><p class="lead">The link may be old or mistyped. You can still book an appointment or contact the clinic.</p><div class="cta"><a class="btn" href="/">Go to the home page</a><a class="btn outline" href="/#book">Book an appointment</a><a class="btn outline" href="tel:+919067197969">Call +91 90671 97969</a></div></div></div></main>
 <footer><div class="wrap">
   <div class="f-grid">
-    <div><div class="f-brand">Manasvi Homoeo &amp; Wellness Studio</div><p class="dim">First floor, Alok Medical and Homeo Pharmacy, Juna Dawa Bazar, near Swasthya Hospital, Ahilyanagar, Maharashtra 414001</p></div>
+    <div><div class="f-brand">Manasvi Homoeo &amp; Wellness Studio</div><p class="dim">First floor, Shri Aalok Homoeo Pharmacy, Juna Dawa Bazar, near Swasthya Hospital, Ahilyanagar, Maharashtra 414001</p></div>
     <nav aria-label="Footer"><b>Quick links</b><ul><li><a href="/index.html">Home</a></li><li><a href="/index.html#book">Book an appointment</a></li><li><a href="/index.html#blog">Health notes</a></li><li><a href="/privacy.html">Privacy policy</a></li></ul></nav>
     <div><b>Contact</b><p class="dim"><a href="tel:+919067197969">+91 90671 97969</a><br><a href="mailto:manasvihomeo25@gmail.com">manasvihomeo25@gmail.com</a></p></div>
   </div>
