@@ -1,0 +1,4 @@
+# YouTube videos. One line per video:  category | YouTube link | caption
+# Categories: feedback, clinic, achievement, packing, followup
+# Lines starting with # are ignored. Example (remove the # to use):
+# feedback | https://youtu.be/XXXXXXXXXXX | A patient shares her experience

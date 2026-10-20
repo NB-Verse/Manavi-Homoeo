@@ -1,0 +1,40 @@
+HOW TO ADD PHOTOS AND VIDEOS
+============================
+Put every photo and video in THIS "media" folder. The website finds them by file name and places
+them automatically. Add, replace or delete files here and upload the folder again; nothing else to edit.
+
+NAME THE FILES LIKE THIS (numbers start at 1 and go up without gaps)
+
+Doctor's photo (top of the doctor section)
+  doctor.jpg
+
+Patient stories (shown in the "Patient feedback" section, as a swipeable row)
+  feedback1.mp4, feedback2.mp4, feedback3.mp4 ...   patient video feedback
+  image1.jpg, image2.png, image3.jpg ...             photos or screenshots of patient feedback
+
+Gallery (shown under the doctor section, with tabs)
+  clinic1.jpg, clinic2.jpg ...             the clinic, entrance, consultation room, yoga space
+  achievement1.jpg, achievement2.jpg ...   awards, certificates, talks, camps
+  packing1.jpg, packing2.mp4 ...           how medicines are packed and sent to other cities
+  followup1.jpg, followup2.mp4 ...         how follow-up care works
+
+Any of these can be a photo (.jpg .jpeg .png .webp) or a video (.mp4 .webm).
+A tab or section appears only when it has at least one file.
+
+CAPTIONS (optional): edit captions.txt
+  One line per file:   feedback1.mp4 = Mrs. Patil, Savedi
+YOUTUBE (optional, for long or heavy videos): edit youtube.txt
+  One line per video:  category | YouTube link | caption
+  Categories: feedback, clinic, achievement, packing, followup
+
+KEEP THE SITE FAST
+- Photos: under about 300 KB each (WhatsApp-sized photos are fine).
+- Videos: under about 15 MB and under 1 minute. Put longer videos on YouTube and list them in youtube.txt.
+- Use .mp4 for videos (iPhone .mov files do not play in all browsers; WhatsApp-forwarded videos are .mp4).
+
+PERMISSION
+- Show a patient's photo, message or video only with that patient's permission.
+- Do not show reports, prescriptions or anything with another person's details.
+
+VIDEO COVER PICTURE (optional): add a photo named like the video plus -poster, e.g. feedback1-poster.jpg.
+It shows before the video plays (important on iPhones). Keep videos under about 10 MB each, or use YouTube.

@@ -1,0 +1,7 @@
+# Captions for photos and videos. One line per file:  filename = caption
+# Lines starting with # are ignored. Examples (remove the # to use):
+# feedback1.mp4 = Mrs. Patil, Savedi
+# clinic1.jpg = Consultation room
+# packing1.jpg = Medicines packed for courier to Pune
+clinic1.jpg = Dr. Vrushali at work in the clinic
+clinic2.jpg = Dr. Vrushali in the consultation room
